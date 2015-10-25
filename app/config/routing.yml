@@ -1,0 +1,11 @@
+dating_admin:
+    resource: "@DatingAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+dating_main:
+    resource: "@DatingMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
