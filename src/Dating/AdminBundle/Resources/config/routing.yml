@@ -1,3 +1,7 @@
+dating_admin_profile:
+    resource: "@DatingAdminBundle/Resources/config/routing/profile.yml"
+    prefix:   /profile
+
 dating_admin_homepage:
     path:     /hello/{name}
     defaults: { _controller: DatingAdminBundle:Default:index }
