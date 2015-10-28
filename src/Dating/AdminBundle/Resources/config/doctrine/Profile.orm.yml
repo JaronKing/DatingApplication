@@ -1,0 +1,24 @@
+Dating\AdminBundle\Entity\Profile:
+    type: entity
+    table: null
+    repositoryClass: Dating\AdminBundle\Entity\ProfileRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        birthday:
+            type: datetime
+        age:
+            type: integer
+        height:
+            type: string
+            length: 255
+        summary:
+            type: text
+        pictures:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

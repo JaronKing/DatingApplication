@@ -1,0 +1,30 @@
+profile:
+    path:     /
+    defaults: { _controller: "DatingAdminBundle:Profile:index" }
+
+profile_show:
+    path:     /{id}/show
+    defaults: { _controller: "DatingAdminBundle:Profile:show" }
+
+profile_new:
+    path:     /new
+    defaults: { _controller: "DatingAdminBundle:Profile:new" }
+
+profile_create:
+    path:     /create
+    defaults: { _controller: "DatingAdminBundle:Profile:create" }
+    methods:  POST
+
+profile_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "DatingAdminBundle:Profile:edit" }
+
+profile_update:
+    path:     /{id}/update
+    defaults: { _controller: "DatingAdminBundle:Profile:update" }
+    methods:  [POST, PUT]
+
+profile_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "DatingAdminBundle:Profile:delete" }
+    methods:  [POST, DELETE]
