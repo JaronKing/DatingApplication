@@ -1,13 +1,13 @@
-dating_user:
-    resource: "@DatingUserBundle/Resources/config/routing.yml"
-    prefix:   /
-
 dating_admin:
     resource: "@DatingAdminBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admin
 
 dating_main:
     resource: "@DatingMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+dating_user:
+    resource: "@DatingUserBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:
