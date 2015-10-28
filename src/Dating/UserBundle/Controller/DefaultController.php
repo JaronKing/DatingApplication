@@ -6,8 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
+        $name = "";
         return $this->render('DatingUserBundle:Default:index.html.twig', array('name' => $name));
     }
 }

@@ -37,7 +37,7 @@ security:
                 provider: fos_userbundle
                 check_path: user_login_check
                 login_path: user_login
-                default_target_path: blog_main_homepage
+                default_target_path: dating_main_homepage
                 always_use_default_target_path: false
                 csrf_provider: form.csrf_provider
             logout:       true
