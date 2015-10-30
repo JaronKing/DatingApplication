@@ -23,13 +23,14 @@ security:
             security: true
             form_login:
                 provider: fos_userbundle
-                check_path: admin.login_check
-                login_path: admin.login
-                default_target_path: blog_admin_homepage
+                check_path: admin_login_check
+                login_path: admin_login
+                default_target_path: dating_admin_homepage
                 always_use_default_target_path: false
+                csrf_provider: form.csrf_provider
             logout:
-                path: admin.logout
-                target: admin.login
+                path:   admin_logout
+                target: admin_login
             anonymous: true
         main:
             pattern: ^/

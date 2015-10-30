@@ -3,5 +3,5 @@ dating_admin_profile:
     prefix:   /profile
 
 dating_admin_homepage:
-    path:     /hello/{name}
+    path:     /
     defaults: { _controller: DatingAdminBundle:Default:index }

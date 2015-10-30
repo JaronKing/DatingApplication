@@ -1,0 +1,19 @@
+user_login:
+    pattern:   /login
+    defaults: { _controller: DatingUserBundle:Security:login }
+
+user_login_check:
+    pattern:   /login_check
+
+user_logout:
+    pattern:   /logout
+
+admin_login:
+    pattern:   /admin/login
+    defaults: { _controller: DatingUserBundle:Security:login }
+
+admin_login_check:
+    pattern:   /admin/login_check
+
+admin_logout:
+    pattern:   /logout
