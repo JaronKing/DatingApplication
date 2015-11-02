@@ -7,4 +7,9 @@ Dating\UserBundle\Entity\User:
             id: true
             generator:
                 strategy: AUTO
+    oneToOne:
+        profile:
+            targetEntity: Dating\AdminBundle\Entity\Profile
+            mappedBy: createdBy
+            nullable: true
     lifecycleCallbacks: {  }

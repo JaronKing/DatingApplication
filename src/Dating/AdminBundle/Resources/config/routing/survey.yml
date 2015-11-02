@@ -1,0 +1,30 @@
+survey:
+    path:     /
+    defaults: { _controller: "DatingAdminBundle:Survey:index" }
+
+survey_show:
+    path:     /{id}/show
+    defaults: { _controller: "DatingAdminBundle:Survey:show" }
+
+survey_new:
+    path:     /new
+    defaults: { _controller: "DatingAdminBundle:Survey:new" }
+
+survey_create:
+    path:     /create
+    defaults: { _controller: "DatingAdminBundle:Survey:create" }
+    methods:  POST
+
+survey_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "DatingAdminBundle:Survey:edit" }
+
+survey_update:
+    path:     /{id}/update
+    defaults: { _controller: "DatingAdminBundle:Survey:update" }
+    methods:  [POST, PUT]
+
+survey_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "DatingAdminBundle:Survey:delete" }
+    methods:  [POST, DELETE]

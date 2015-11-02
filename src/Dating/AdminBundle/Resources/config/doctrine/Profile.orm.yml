@@ -21,4 +21,12 @@ Dating\AdminBundle\Entity\Profile:
         pictures:
             type: string
             length: 255
+    oneToOne:
+        createdBy:
+            targetEntity: Dating\UserBundle\Entity\User
+            inversedBy: profile
+            nullable: true
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

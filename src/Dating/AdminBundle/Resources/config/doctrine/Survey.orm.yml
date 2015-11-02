@@ -1,0 +1,36 @@
+Dating\AdminBundle\Entity\Survey:
+    type: entity
+    table: null
+    repositoryClass: Dating\AdminBundle\Entity\SurveyRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        description:
+            type: text
+        body:
+            type: text
+        questions:
+            type: string
+            length: 255
+        createdBy:
+            type: string
+            length: 255
+        dateCreated:
+            type: datetime
+        outcomes:
+            type: string
+            length: 255
+        scores:
+            type: string
+            length: 255
+        submittedBy:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

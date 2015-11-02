@@ -29,5 +29,33 @@ class User extends BaseUser
     {
         return $this->id;
     }
-}
+    /**
+     * @var \Dating\AdminBundle\Entity\Profile
+     */
+    private $profile;
 
+
+    /**
+     * Set profile
+     *
+     * @param \Dating\AdminBundle\Entity\Profile $profile
+     *
+     * @return User
+     */
+    public function setProfile(\Dating\AdminBundle\Entity\Profile $profile = null)
+    {
+        $this->profile = $profile;
+
+        return $this;
+    }
+
+    /**
+     * Get profile
+     *
+     * @return \Dating\AdminBundle\Entity\Profile
+     */
+    public function getProfile()
+    {
+        return $this->profile;
+    }
+}

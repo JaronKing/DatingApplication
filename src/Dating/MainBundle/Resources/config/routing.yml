@@ -1,3 +1,11 @@
 dating_main_homepage:
     path:     /
     defaults: { _controller: DatingMainBundle:Default:index }
+
+show:
+    path:     /show
+    defaults: { _controller: DatingMainBundle:Profile:show }
+
+edit:
+    path:     /edit
+    defaults: { _controller: DatingMainBundle:Profile:edit }
