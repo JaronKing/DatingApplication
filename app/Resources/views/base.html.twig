@@ -1,3 +1,4 @@
+{% set navbar = true %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +46,7 @@
         text-align: center;
     }
 </style>
+{% if navbar %}
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -76,7 +78,7 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
+{% endif %}
 
 <div class="container">
     <div class="starter-template">
@@ -102,6 +104,7 @@
 '@DatingMainBundle/Resources/public/dashgumfree/assets/js/gritter-conf.js'
 '@DatingMainBundle/Resources/public/dashgumfree/assets/js/sparkline-chart.js'
 '@DatingMainBundle/Resources/public/dashgumfree/assets/js/zabuto_calendar.js'
+'@DatingMainBundle/Resources/public/dashgumfree/assets/js/jquery.backstretch.min.js'
 output='assets/js/compiled/main.js'
 %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
