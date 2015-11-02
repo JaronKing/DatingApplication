@@ -1,0 +1,15 @@
+main_profile_show:
+    path:     /show/{id}
+    defaults: { _controller: DatingMainBundle:Profile:show }
+
+main_profile_edit:
+    path:     /edit
+    defaults: { _controller: DatingMainBundle:Profile:edit }
+
+main_profile_index:
+    path:    /
+    defaults: { _controller: DatingMainBundle:Profile:index }
+
+main_profile_create:
+    path:    /create
+    defaults: { _controller: DatingMainBundle:Profile:create }

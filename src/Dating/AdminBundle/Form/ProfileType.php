@@ -17,9 +17,17 @@ class ProfileType extends AbstractType
         $builder
             ->add('birthday')
             ->add('age')
-            ->add('height')
-            ->add('summary')
-            ->add('pictures')
+            ->add('height', 'text', array(
+        'attr' => array( 'class' => 'form-control' )
+            ))
+            ->add('summary', 'text', array(
+                'attr' => array( 'class' => 'form-control' )
+            ))
+            ->add('pictures', 'file', array(
+                'attr' => array( 'style' => 'margin: auto; width: 200px;' ),
+                'data_class' => null,
+                'required' => false
+            ))
         ;
     }
     

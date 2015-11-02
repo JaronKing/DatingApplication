@@ -167,5 +167,33 @@ class Profile
     {
         return $this->pictures;
     }
-}
+    /**
+     * @var \Dating\UserBundle\Entity\User
+     */
+    private $createdBy;
 
+
+    /**
+     * Set createdBy
+     *
+     * @param \Dating\UserBundle\Entity\User $createdBy
+     *
+     * @return Profile
+     */
+    public function setCreatedBy(\Dating\UserBundle\Entity\User $createdBy = null)
+    {
+        $this->createdBy = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Get createdBy
+     *
+     * @return \Dating\UserBundle\Entity\User
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+}

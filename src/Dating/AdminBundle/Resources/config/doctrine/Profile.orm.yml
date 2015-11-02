@@ -21,6 +21,9 @@ Dating\AdminBundle\Entity\Profile:
         pictures:
             type: string
             length: 255
+            nullable: true
+        dateCreated:
+            type: datetime
     oneToOne:
         createdBy:
             targetEntity: Dating\UserBundle\Entity\User
