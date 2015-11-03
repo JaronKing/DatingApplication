@@ -31,9 +31,25 @@ class ProfileController extends Controller
         ));
     }
 
-    public function editAction()
+    public function editAction(Request $request)
     {
-        return $this->render('DatingMainBundle:Profile:edit.html.twig', array(// ...
+        $em = $this->getDoctrine()->getManager();
+        $profile = $em->getRepository('DatingAdminBundle:Profile')->findOneBy( array('id' => $this->getUser() ));
+        $form = $this->createCreateForm($profile);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $profile->setCreatedBy($this->getUser());
+            $profile->setDateCreated(new \DateTime('now'));
+            $em->persist($profile);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('main_profile_show', array('id' => $profile->getId())));
+        }
+        return $this->render('DatingMainBundle:Profile:edit.html.twig', array(
+            'profile' => $profile,
+            'form' => $form->createView()
         ));
     }
 
