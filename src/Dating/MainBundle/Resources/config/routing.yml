@@ -2,7 +2,18 @@ dating_main_homepage:
     path:     /
     defaults: { _controller: DatingMainBundle:Default:index }
 
+dating_like:
+    path:   /like/{id}
+    defaults: { _controller: DatingMainBundle:Default:like }
+
 dating_main_profile:
     resource: "@DatingMainBundle/Resources/config/routing/profile.yml"
     prefix:     /profile
 
+index:
+    path:     /like
+    defaults: { _controller: DatingMainBundle:Like:index }
+
+like:
+    path:     /like/u/{id}
+    defaults: { _controller: DatingMainBundle:Like:like }

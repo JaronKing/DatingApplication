@@ -12,4 +12,19 @@ Dating\UserBundle\Entity\User:
             targetEntity: Dating\AdminBundle\Entity\Profile
             mappedBy: createdBy
             nullable: true
+    manyToMany:
+        likes:
+            targetEntity: Dating\UserBundle\Entity\User
+            mappedBy: myLikes
+        myLikes:
+            targetEntity: Dating\UserBundle\Entity\User
+            inversedBy: likes
+            joinTable:
+                name: myLikes
+                joinColumns:
+                    user_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    like_user_id:
+                        referencedColumnName: id
     lifecycleCallbacks: {  }

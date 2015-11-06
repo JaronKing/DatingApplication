@@ -1,0 +1,7 @@
+like_index:
+    path:     /like
+    defaults: { _controller: DatingMainBundle:Like:index }
+
+like:
+    path:     /like/u/{id}
+    defaults: { _controller: DatingMainBundle:Like:like }

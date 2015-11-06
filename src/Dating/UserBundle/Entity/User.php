@@ -58,4 +58,82 @@ class User extends BaseUser
     {
         return $this->profile;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $likes;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $myLikes;
+
+
+    /**
+     * Add like
+     *
+     * @param \Dating\UserBundle\Entity\User $like
+     *
+     * @return User
+     */
+    public function addLike(\Dating\UserBundle\Entity\User $like)
+    {
+        $this->likes[] = $like;
+
+        return $this;
+    }
+
+    /**
+     * Remove like
+     *
+     * @param \Dating\UserBundle\Entity\User $like
+     */
+    public function removeLike(\Dating\UserBundle\Entity\User $like)
+    {
+        $this->likes->removeElement($like);
+    }
+
+    /**
+     * Get likes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLikes()
+    {
+        return $this->likes;
+    }
+
+    /**
+     * Add myLike
+     *
+     * @param \Dating\UserBundle\Entity\User $myLike
+     *
+     * @return User
+     */
+    public function addMyLike(\Dating\UserBundle\Entity\User $myLike)
+    {
+        $this->myLikes[] = $myLike;
+
+        return $this;
+    }
+
+    /**
+     * Remove myLike
+     *
+     * @param \Dating\UserBundle\Entity\User $myLike
+     */
+    public function removeMyLike(\Dating\UserBundle\Entity\User $myLike)
+    {
+        $this->myLikes->removeElement($myLike);
+    }
+
+    /**
+     * Get myLikes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMyLikes()
+    {
+        return $this->myLikes;
+    }
 }
